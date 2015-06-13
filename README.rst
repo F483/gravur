@@ -58,9 +58,9 @@ fleshed out over time.
 
  - Wallet
 
-   - .. _HD BIP32: https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki
+   - `HD BIP32 <https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki>`_
 
-   - .. _Secure SPV Backend: https://en.bitcoin.it/wiki/Thin_Client_Security
+   - `Secure SPV Backend <https://en.bitcoin.it/wiki/Thin_Client_Security>`_
 
    - Electrum compatible
 
