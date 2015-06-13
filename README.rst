@@ -34,24 +34,41 @@ Installation
 Basic roadmap
 =============
 
-What will be done in which order, the later the more vague.
-This will be fleshed out over time.
+What will be done in which order, the later the more vague. This will be
+fleshed out over time.
+
 
  - Prerequisites
+
    - Store data in nulldata output
+
    - Store data in hash160 output
+
    - Sign data
+
    - Verify signature
+
  - Messages
+
    - Public broadcast (unencrypted cryptograffiti.info compatible)
+
    - Private message (encrypted)
+
    - Blockchain scanner
+
  - Wallet
+
    - .. _HD BIP32: https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki
+
    - .. _Secure SPV Backend: https://en.bitcoin.it/wiki/Thin_Client_Security
+
    - Electrum compatible
+
  - OS Distributions with auto updaters
+
    - Windows
+
    - Mac
+
    - Linux
 
