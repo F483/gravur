@@ -31,7 +31,7 @@ setup(
     download_url = DOWNLOAD_URL,
     test_suite="tests",
     install_requires=[
-        # TODO requirements
+        'btctxstore == 2.2.0'
     ],
     tests_require=[
         'coverage',

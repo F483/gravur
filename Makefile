@@ -23,7 +23,12 @@ devsetup: clean
 	@virtualenv -p /usr/bin/python3 env/py3
 	@env/py2/bin/python setup.py develop
 	@env/py3/bin/python setup.py develop
+	# FIXME setup kiwy in virtual env
 
+
+run:
+	# FIXME run from virtual env
+	@python gravur/app.py
 
 test:
 	@env/py2/bin/python setup.py test
@@ -32,6 +37,6 @@ test:
 
 
 publish: test
-	@env/py3/bin/python setup.py register sdist upload
+	@env/py2/bin/python setup.py register sdist upload
 
 

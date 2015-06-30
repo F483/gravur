@@ -1,0 +1,49 @@
+BoxLayout:
+    padding: 5
+    spacing: 5
+    orientation: 'vertical'
+
+    Label:
+        text: 'GRAVUR'
+        size_hint_y: None
+        font_size: 60
+        height: 60
+
+    Label:
+        text: 'Store a message on the bitcoin blockchain.'
+        size_hint_y: None
+        font_size: 15
+        height: 30
+        canvas:
+            Color:
+                rgba: 1, 1, 1, 0.25
+            Rectangle:
+                pos: self.pos
+                size: self.size
+    
+    TextInput:
+        multiline: False
+        hint_text: 'Wallet key in WIF format to pay fees.'
+        size_hint_y: None
+        height: 32
+
+    TextInput:
+        multiline: True
+        hint_text: 'Message to be stored on the bitcoin blockchain.'
+
+    Label:
+        text: 'Fee: TODO'
+        size_hint_y: None
+        font_size: 15
+        height: 30
+        canvas:
+            Color:
+                rgba: 1, 1, 1, 0.25
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+    Button:
+        text: 'Store Message'
+        size_hint_y: None
+        height: 45
