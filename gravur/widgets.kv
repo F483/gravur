@@ -1,0 +1,50 @@
+<NavBar>:
+    pos_hint: {'top':1}
+    ActionView:
+        use_separator: True
+        ActionPrevious:
+            title: 'Gravur'
+            on_press: root.parent.parent.manager.current = 'main'
+            with_previous: False
+#        ActionButton:
+#            text: '1.2BTC'
+
+
+<HelpBox>:
+    text: ('[b]' + self.helpbox_title + '[/b]\n') + self.helpbox_text
+    markup: True
+    font_size: 15
+    size_hint_y: None
+    height: 64
+    halign: 'center'
+    canvas:
+        Color:
+            rgba: 0.5, 0.5, 1, 0.5
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+
+<LabelBox>:
+    font_size: 15
+    size_hint_y: None
+    height: 30
+    canvas:
+        Color:
+            rgba: 1, 1, 1, 0.25
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+
+<NormalButton>:
+    text: '[b]' + self.normalbutton_text +'[/b]'
+    markup: True
+
+
+<StoreButton>:
+    text: '[b]' + self.storebutton_text + '[/b]'
+    size_hint_y: None
+    height: 45
+    background_color: 0, 1, 0, 1
+    markup: True

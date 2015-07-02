@@ -1,0 +1,55 @@
+<WalletSendScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+
+        NavBar:
+
+        BoxLayout:
+            padding: 5
+            spacing: 5
+            orientation: 'vertical'
+
+            HelpBox:
+                helpbox_title: 'Send Bitcoin'
+                helpbox_text: 'TODO help text'
+
+            BoxLayout:
+                spacing: 5
+                size_hint_y: None
+                height: 32
+
+                NormalButton:
+                    normalbutton_text: 'Scan QR Code'
+
+                NormalButton:
+                    normalbutton_text: 'From Contact'
+
+            TextInput:
+                multiline: False
+                hint_text: 'Recipient address'
+                size_hint_y: None
+                height: 32
+
+            BoxLayout:
+                spacing: 5
+                size_hint_y: None
+                height: 32
+
+                TextInput:
+                    multiline: False
+                    hint_text: 'Amount'
+                    size_hint_y: None
+                    height: 32
+
+                LabelBox:
+                    text: '~1.23USD'
+
+            TextInput:
+                multiline: True
+                hint_text: 'Optional private message to recipient.'
+
+            LabelBox:
+                text: 'Fee: 0.0001BTC (~0.001USD)'
+
+            StoreButton:
+                storebutton_text: 'Send'

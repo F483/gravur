@@ -1,0 +1,24 @@
+<BroadcastMessageScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+
+        NavBar:
+
+        BoxLayout:
+            padding: 5
+            spacing: 5
+            orientation: 'vertical'
+
+            HelpBox:
+                helpbox_title: 'Broadcast Message'
+                helpbox_text: 'TODO help text'
+
+            TextInput:
+                multiline: True
+                hint_text: 'Message to be stored on the bitcoin blockchain.'
+
+            LabelBox:
+                text: 'Fee: 0.0001BTC (~0.01USD)'
+
+            StoreButton:
+                storebutton_text: 'Broadcast Message'

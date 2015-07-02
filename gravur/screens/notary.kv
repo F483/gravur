@@ -1,0 +1,49 @@
+<NotaryScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+
+        NavBar:
+
+        Accordion:
+            orientation: 'vertical'
+
+            AccordionItem:
+                title: 'Signatures'
+
+                BoxLayout:
+                    padding: 5
+                    spacing: 5
+                    orientation: 'vertical'
+
+                    NormalButton:
+                        normalbutton_text: 'Sign Document'
+                        on_press: root.manager.current = 'sign_document'
+                        size_hint_y: None
+                        height: 32
+
+                    ListView:
+                        item_strings: ["Dummy signature " + str(i) for i in range(100)]
+
+            AccordionItem:
+                title: 'Proof of existance'
+
+                BoxLayout:
+                    padding: 5
+                    spacing: 5
+                    orientation: 'vertical'
+
+                    GridLayout:
+                        cols: 2
+                        spacing: 5
+                        size_hint_y: None
+                        height: 32
+
+                        NormalButton:
+                            normalbutton_text: 'Create Proof'
+                            on_press: root.manager.current = 'create_poe'
+
+                        NormalButton:
+                            normalbutton_text: 'Find Proof'
+
+                    ListView:
+                        item_strings: ["Dummy proof " + str(i) for i in range(100)]

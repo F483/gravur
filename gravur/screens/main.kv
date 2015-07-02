@@ -1,0 +1,34 @@
+<MainScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+
+        NavBar:
+
+        GridLayout:
+            cols: 2
+            padding: 5
+            spacing: 5
+
+            NormalButton:
+                normalbutton_text: 'Wallet'
+                on_press: root.manager.current = 'wallet'
+
+            NormalButton:
+                normalbutton_text: 'Messages'
+                on_press: root.manager.current = 'messages'
+
+            NormalButton:
+                normalbutton_text: 'Contacts'
+
+            NormalButton:
+                normalbutton_text: 'Notary'
+                on_press: root.manager.current = 'notary'
+
+            NormalButton:
+                normalbutton_text: 'Escrow'
+
+#            NormalButton:
+#                normalbutton_text: 'Crowdfunding'
+
+            NormalButton:
+                normalbutton_text: 'Settings'
