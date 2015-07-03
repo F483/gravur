@@ -24,7 +24,20 @@
 
                 NormalButton:
                     normalbutton_text: 'Receive'
+                    on_press: root.manager.current = 'wallet_receive'
 
-            ListView:
-                item_strings: ["Dummy transaction " + str(i) for i in range(100)]
+            Accordion:
+                orientation: 'vertical'
 
+                AccordionItem:
+                    title: 'Transactions'
+                    collapse: False
+
+                    ListView:
+                        item_strings: ["Dummy transaction " + str(i) for i in range(100)]
+
+                AccordionItem:
+                    title: 'Invoices'
+
+                    ListView:
+                        item_strings: ["Dummy invoice " + str(i) for i in range(100)]

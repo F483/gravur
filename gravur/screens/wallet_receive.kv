@@ -1,0 +1,46 @@
+<WalletReceiveScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+
+        NavBar:
+
+        Accordion:
+            orientation: 'vertical'
+
+            AccordionItem:
+                title: 'Recieve at address'
+                collapse: False
+
+                BoxLayout:
+                    padding: 5
+                    spacing: 5
+                    orientation: 'vertical'
+
+                    AmountInput:
+
+                    AddressDisplay:
+                        title: 'Recieve address'
+                        address: 'migiScBNvVKYwEiCFhgBNGtZ87cdygtuSQ'
+
+            AccordionItem:
+                title: 'Send invoice to contact'
+
+                BoxLayout:
+                    padding: 5
+                    spacing: 5
+                    orientation: 'vertical'
+
+                    SelectContact:
+
+                    AmountInput:
+
+                    TextInput:
+                        multiline: True
+                        hint_text: 'Invoice text.'
+
+                    LabelBox:
+                        text: 'Fee: 0.0001BTC (~0.001USD)'
+
+                    StoreButton:
+                        storebutton_text: 'Send invoice'
+

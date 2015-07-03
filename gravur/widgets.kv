@@ -10,32 +10,16 @@
 #            text: '1.2BTC'
 
 
-<HelpBox>:
-    text: ('[b]' + self.helpbox_title + '[/b]\n') + self.helpbox_text
-    markup: True
-    font_size: 15
-    size_hint_y: None
-    height: 64
-    halign: 'center'
-    canvas:
-        Color:
-            rgba: 0.5, 0.5, 1, 0.5
-        Rectangle:
-            pos: self.pos
-            size: self.size
-
-
 <LabelBox>:
     font_size: 15
     size_hint_y: None
-    height: 30
+    height: 32
     canvas:
         Color:
             rgba: 1, 1, 1, 0.25
         Rectangle:
             pos: self.pos
             size: self.size
-
 
 <NormalButton>:
     text: '[b]' + self.normalbutton_text +'[/b]'
@@ -48,3 +32,70 @@
     height: 45
     background_color: 0, 1, 0, 1
     markup: True
+
+
+<SelectContact>:
+    size_hint_y: None
+    height: 32
+    orientation: 'vertical'
+    spacing: 5
+
+    BoxLayout:
+        spacing: 5
+
+        LabelBox:
+            text: 'To: John Doe'
+
+        NormalButton:
+            normalbutton_text: 'Select'
+            size_hint_x: None
+
+
+<AmountInput>:
+    spacing: 5
+    size_hint_y: None
+    height: 32
+
+    TextInput:
+        multiline: False
+        hint_text: 'Amount'
+        size_hint_y: None
+        height: 32
+
+    LabelBox:
+        text: '~1.23USD'
+
+
+<AddressDisplay>:
+    orientation: 'vertical'
+
+    BoxLayout:
+        canvas:
+            Color:
+                rgba: 1, 1, 1, 0.25
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        size_hint_y: None
+        height: 32
+
+        Label:
+            text: root.title
+
+        NormalButton:
+            normalbutton_text: 'Copy to clipboard'
+
+    LabelBox:
+        size_hint_y: None
+        height: 32
+        text: root.address
+
+    Label:
+        canvas:
+            Color:
+                rgba: 1, 0, 0, 0.25
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        text: 'Show QR Code here'

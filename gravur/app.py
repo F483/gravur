@@ -15,6 +15,7 @@ from kivy.properties import Property
 from kivy.uix.actionbar import ActionBar
 from kivy.uix.label import Label
 from kivy.uix.button import Button
+from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.screenmanager import ScreenManager, Screen, WipeTransition
 
 
@@ -22,9 +23,18 @@ class NavBar(ActionBar):
     pass
 
 
-class HelpBox(Label):
-    helpbox_title = Property('')
-    helpbox_text = Property('')
+class SelectContact(BoxLayout):
+    pass
+
+
+class AmountInput(BoxLayout):
+    pass
+
+
+class AddressDisplay(BoxLayout):
+    title = Property('')
+    address = Property('')
+    amount = Property('')
 
 
 class LabelBox(Label):
@@ -67,6 +77,10 @@ class WalletSendScreen(Screen):
     pass
 
 
+class WalletReceiveScreen(Screen):
+    pass
+
+
 class SignDocumentScreen(Screen):
     pass
 
@@ -86,6 +100,7 @@ class GravurApp(App):
         sm.add_widget(NotaryScreen(name='notary'))
         sm.add_widget(WalletScreen(name='wallet'))
         sm.add_widget(WalletSendScreen(name='wallet_send'))
+        sm.add_widget(WalletReceiveScreen(name='wallet_receive'))
         sm.add_widget(SignDocumentScreen(name='sign_document'))
         sm.add_widget(CreatePOEScreen(name='create_poe'))
         return sm

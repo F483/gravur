@@ -4,52 +4,61 @@
 
         NavBar:
 
-        BoxLayout:
-            padding: 5
-            spacing: 5
+        Accordion:
             orientation: 'vertical'
 
-            HelpBox:
-                helpbox_title: 'Send Bitcoin'
-                helpbox_text: 'TODO help text'
+            AccordionItem:
+                title: 'Send to address'
+                collapse: False
 
-            BoxLayout:
-                spacing: 5
-                size_hint_y: None
-                height: 32
+                BoxLayout:
+                    padding: 5
+                    spacing: 5
+                    orientation: 'vertical'
 
-                NormalButton:
-                    normalbutton_text: 'Scan QR Code'
+                    Label:
+                        text: ''
 
-                NormalButton:
-                    normalbutton_text: 'From Contact'
+                    NormalButton:
+                        normalbutton_text: 'Scan QR code'
+                        size_hint_y: None
+                        height: 32
 
-            TextInput:
-                multiline: False
-                hint_text: 'Recipient address'
-                size_hint_y: None
-                height: 32
+                    TextInput:
+                        multiline: False
+                        hint_text: 'Recipient address'
+                        size_hint_y: None
+                        height: 32
 
-            BoxLayout:
-                spacing: 5
-                size_hint_y: None
-                height: 32
+                    AmountInput:
 
-                TextInput:
-                    multiline: False
-                    hint_text: 'Amount'
-                    size_hint_y: None
-                    height: 32
+                    LabelBox:
+                        text: 'Fee: 0.0001BTC (~0.001USD)'
 
-                LabelBox:
-                    text: '~1.23USD'
+                    StoreButton:
+                        storebutton_text: 'Send'
 
-            TextInput:
-                multiline: True
-                hint_text: 'Optional private message to recipient.'
+                    Label:
+                        text: ''
 
-            LabelBox:
-                text: 'Fee: 0.0001BTC (~0.001USD)'
+            AccordionItem:
+                title: 'Send to contact'
 
-            StoreButton:
-                storebutton_text: 'Send'
+                BoxLayout:
+                    padding: 5
+                    spacing: 5
+                    orientation: 'vertical'
+
+                    SelectContact:
+
+                    AmountInput:
+
+                    TextInput:
+                        multiline: True
+                        hint_text: 'Optional private message to recipient.'
+
+                    LabelBox:
+                        text: 'Fee: 0.0001BTC (~0.001USD)'
+
+                    StoreButton:
+                        storebutton_text: 'Send'
