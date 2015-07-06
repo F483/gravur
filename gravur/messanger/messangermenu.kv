@@ -22,8 +22,7 @@
                     normalbutton_text: 'Private Message'
                     on_press: root.manager.current = 'private_message'
 
-            ListView:
-                item_strings: ["Dummy message text " + str(i) for i in range(100)]
+            MessageList:
 
             NormalButton:
                 normalbutton_text: 'Retrieve from Transaction'

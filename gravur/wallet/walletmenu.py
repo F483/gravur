@@ -5,6 +5,7 @@
 
 from kivy.uix.screenmanager import Screen
 from wallet.transactionlist import TransactionList  # NOQA
+from wallet.invoicelist import InvoiceList  # NOQA
 from common.labelbox import LabelBox  # NOQA
 from common.navbar import NavBar  # NOQA
 from common.normalbutton import NormalButton  # NOQA

@@ -1,0 +1,21 @@
+<MessagePreview>:
+    size_hint_y: None
+    orientation: 'vertical'
+    height: lbl_message.height + 32
+
+    BoxLayout:
+        size_hint_y: None
+        height: 32
+
+        LabelBox:
+            text: root.alias
+
+        LabelBox:
+            text: root.timestamp
+
+    LabelBox:
+        id: lbl_message
+        size_hint_y: None
+        text_size: self.width, None
+        text: root.message
+        height: self.texture_size[1]
