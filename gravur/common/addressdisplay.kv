@@ -1,0 +1,33 @@
+<AddressDisplay>:
+    orientation: 'vertical'
+
+    BoxLayout:
+        canvas:
+            Color:
+                rgba: 1, 1, 1, 0.25
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        size_hint_y: None
+        height: 32
+
+        Label:
+            text: root.title
+
+        NormalButton:
+            normalbutton_text: 'Copy to clipboard'
+
+    LabelBox:
+        size_hint_y: None
+        height: 32
+        text: root.address
+
+    Label:
+        canvas:
+            Color:
+                rgba: 1, 0, 0, 0.25
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        text: 'Show QR Code here'

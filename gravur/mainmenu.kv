@@ -1,4 +1,4 @@
-<MainScreen>:
+<MainMenu>:
     BoxLayout:
         orientation: 'vertical'
 
@@ -6,12 +6,10 @@
 
         GridLayout:
             cols: 2
-            padding: 5
-            spacing: 5
 
             NormalButton:
                 normalbutton_text: 'Wallet'
-                on_press: root.manager.current = 'wallet'
+                on_press: root.manager.current = 'wallet_menu'
 
             NormalButton:
                 normalbutton_text: 'Messages'
@@ -26,9 +24,6 @@
 
             NormalButton:
                 normalbutton_text: 'Escrow'
-
-#            NormalButton:
-#                normalbutton_text: 'Crowdfunding'
 
             NormalButton:
                 normalbutton_text: 'Settings'
