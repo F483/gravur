@@ -1,40 +1,34 @@
 <WalletMenu>:
     BoxLayout:
+        spacing: 1
         orientation: 'vertical'
 
-        NavBar:
+        LabelBox:
+            text: 'Balance: 1.23BTC (~2.34USD)'
 
-        BoxLayout:
+        GridLayout:
+            cols: 2
             spacing: 1
-            orientation: 'vertical'
+            size_hint_y: None
+            height: 32
 
-            LabelBox:
-                text: 'Balance: 1.23BTC (~2.34USD)'
+            NormalButton:
+                normalbutton_text: 'Send'
+                on_press: root.manager.current = 'wallet_send'
 
-            GridLayout:
-                cols: 2
-                spacing: 1
-                size_hint_y: None
-                height: 32
+            NormalButton:
+                normalbutton_text: 'Receive'
+                on_press: root.manager.current = 'wallet_receive'
 
-                NormalButton:
-                    normalbutton_text: 'Send'
-                    on_press: root.manager.current = 'wallet_send'
+        FadingTabbedPanel:
+            tab_width: (self.size[0] / 2) - 2
 
-                NormalButton:
-                    normalbutton_text: 'Receive'
-                    on_press: root.manager.current = 'wallet_receive'
+            TabbedPanelItem:
+                text: 'Transactions'
 
-            Accordion:
-                orientation: 'vertical'
+                TransactionScrollView:
 
-                AccordionItem:
-                    title: 'Transactions'
-                    collapse: False
+            TabbedPanelItem:
+                text: 'Invoices'
 
-                    TransactionList:
-
-                AccordionItem:
-                    title: 'Invoices'
-
-                    InvoiceList:
+                InvoiceScrollView:

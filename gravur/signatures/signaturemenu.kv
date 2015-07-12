@@ -1,0 +1,13 @@
+<SignatureMenu>:
+    BoxLayout:
+        spacing: 1
+        orientation: 'vertical'
+
+        NormalButton:
+            normalbutton_text: 'Sign Document'
+            on_press: root.manager.current = 'sign_document'
+            size_hint_y: None
+            height: 32
+
+        SignatureScrollView:
+

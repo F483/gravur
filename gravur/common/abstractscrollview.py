@@ -26,11 +26,13 @@ class AbstractScrollView(ScrollView):
         layout.bind(minimum_height=layout.setter('height'))
 
         # add widgets to layout
-        entry_widget = kwargs['entry_widget']
         entries = kwargs.get('entries', [])
-        for widget_kwargs in entries:
-            widget_kwargs.update({"size_hint_y": None})
-            layout.add_widget(entry_widget(**widget_kwargs))
+        for entry in entries:
+            widget = self.entry_to_widget(entry)
+            layout.add_widget(widget)
 
         # add layout
         self.add_widget(layout)
+
+    def entry_to_widget(self, entry):
+        raise Exception("Abstract method")

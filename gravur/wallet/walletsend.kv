@@ -1,62 +1,52 @@
 <WalletSend>:
-    BoxLayout:
-        orientation: 'vertical'
+    FadingTabbedPanel:
+        tab_width: (self.size[0] / 2) - 2
 
-        NavBar:
+        TabbedPanelItem:
+            text: 'Send to address'
 
-        Accordion:
-            orientation: 'vertical'
+            BoxLayout:
+                orientation: 'vertical'
+                spacing: 1
 
-            AccordionItem:
-                title: 'Send to address'
-                collapse: False
+                NormalButton:
+                    normalbutton_text: 'Scan QR code'
+                    size_hint_y: None
+                    height: 32
 
-                BoxLayout:
-                    spacing: 1
-                    orientation: 'vertical'
+                TextInput:
+                    multiline: False
+                    hint_text: 'Recipient address'
+                    size_hint_y: None
+                    height: 32
 
-                    Label:
-                        text: ''
+                AmountInput:
 
-                    NormalButton:
-                        normalbutton_text: 'Scan QR code'
-                        size_hint_y: None
-                        height: 32
+                LabelBox:
+                    text: 'Fee: 0.0001BTC (~0.001USD)'
 
-                    TextInput:
-                        multiline: False
-                        hint_text: 'Recipient address'
-                        size_hint_y: None
-                        height: 32
+                StoreButton:
+                    storebutton_text: 'Send'
 
-                    AmountInput:
+                EigengrauBox:
 
-                    LabelBox:
-                        text: 'Fee: 0.0001BTC (~0.001USD)'
+        TabbedPanelItem:
+            text: 'Send to contact'
 
-                    StoreButton:
-                        storebutton_text: 'Send'
+            BoxLayout:
+                spacing: 1
+                orientation: 'vertical'
 
-                    Label:
-                        text: ''
+                SelectContact:
 
-            AccordionItem:
-                title: 'Send to contact'
+                AmountInput:
 
-                BoxLayout:
-                    spacing: 1
-                    orientation: 'vertical'
+                TextInput:
+                    multiline: True
+                    hint_text: 'Optional private message to recipient.'
 
-                    SelectContact:
+                LabelBox:
+                    text: 'Fee: 0.0001BTC (~0.001USD)'
 
-                    AmountInput:
-
-                    TextInput:
-                        multiline: True
-                        hint_text: 'Optional private message to recipient.'
-
-                    LabelBox:
-                        text: 'Fee: 0.0001BTC (~0.001USD)'
-
-                    StoreButton:
-                        storebutton_text: 'Send'
+                StoreButton:
+                    storebutton_text: 'Send'

@@ -1,29 +1,24 @@
 <MainMenu>:
-    BoxLayout:
-        orientation: 'vertical'
+    GridLayout:
+        cols: 2
 
-        NavBar:
+        NormalButton:
+            normalbutton_text: 'Wallet'
+            on_press: root.manager.current = 'wallet_menu'
 
-        GridLayout:
-            cols: 2
+        NormalButton:
+            normalbutton_text: 'Messages'
+            on_press: root.manager.current = 'messages'
 
-            NormalButton:
-                normalbutton_text: 'Wallet'
-                on_press: root.manager.current = 'wallet_menu'
+        NormalButton:
+            normalbutton_text: 'Contacts'
 
-            NormalButton:
-                normalbutton_text: 'Messages'
-                on_press: root.manager.current = 'messages'
+        NormalButton:
+            normalbutton_text: 'Signatures'
+            on_press: root.manager.current = 'signatures'
 
-            NormalButton:
-                normalbutton_text: 'Contacts'
+        NormalButton:
+            normalbutton_text: 'Escrow'
 
-            NormalButton:
-                normalbutton_text: 'Notary'
-                on_press: root.manager.current = 'notary'
-
-            NormalButton:
-                normalbutton_text: 'Escrow'
-
-            NormalButton:
-                normalbutton_text: 'Settings'
+        NormalButton:
+            normalbutton_text: 'Settings'

@@ -4,12 +4,12 @@
 
 
 from common.abstractscrollview import AbstractScrollView
-from wallet.invoicepreview import InvoicePreview
+from signatures.signaturepreview import SignaturePreview
 from utils import load_widget
 
 
 @load_widget
-class InvoiceScrollView(AbstractScrollView):
+class SignatureScrollView(AbstractScrollView):
 
     def __init__(self, *args, **kwargs):
 
@@ -17,8 +17,9 @@ class InvoiceScrollView(AbstractScrollView):
         id = 'e30fa138367bc73b2174f54bd4cf307521ba26fe91539e0a77e22d3dd2cdbc03'
         entries = [{'txid': id} for i in range(100)]
 
-        kwargs.update({ 'spacing': 1, 'entries': entries })
-        super(InvoiceScrollView, self).__init__(*args, **kwargs)
+        kwargs.update({ 'spacing': 5, 'entries': entries })
+        super(SignatureScrollView, self).__init__(*args, **kwargs)
 
     def entry_to_widget(self, entry):
-        return InvoicePreview(**entry)
+        return SignaturePreview(**entry)
+

@@ -11,7 +11,7 @@ Config.set('graphics', 'height', '460')
 
 
 from kivy.app import App
-from kivy.uix.screenmanager import ScreenManager, WipeTransition
+from kivy.uix.screenmanager import ScreenManager
 from mainmenu import MainMenu
 from wallet.walletmenu import WalletMenu
 from wallet.walletsend import WalletSend
@@ -19,30 +19,40 @@ from wallet.walletreceive import WalletReceive
 from messanger.messangermenu import MessangerMenu
 from messanger.broadcastmessage import BroadcastMessage
 from messanger.privatemessage import PrivateMessage
-from notary.notarymenu import NotaryMenu
-from notary.signdocument import SignDocument
-from notary.createpoe import CreatePOE
+from signatures.signaturemenu import SignatureMenu
+from signatures.signdocument import SignDocument
+from common.navbar import NavBar
+from common.historicscreenmanager import HistoricScreenManager
+from kivy.uix.boxlayout import BoxLayout
+from kivy.properties import StringProperty
 
 
 class GravurApp(App):
 
     def build(self):
-        sm = ScreenManager(transition=WipeTransition())
 
-        sm.add_widget(MainMenu(name='mainmenu'))
+        # setup screens
+        manager = HistoricScreenManager()
 
-        sm.add_widget(WalletMenu(name='wallet_menu'))
-        sm.add_widget(WalletSend(name='wallet_send'))
-        sm.add_widget(WalletReceive(name='wallet_receive'))
+        manager.add_widget(MainMenu(name='mainmenu'))
 
-        sm.add_widget(MessangerMenu(name='messages'))
-        sm.add_widget(BroadcastMessage(name='broadcast_message'))
-        sm.add_widget(PrivateMessage(name='private_message'))
+        manager.add_widget(WalletMenu(name='wallet_menu'))
+        manager.add_widget(WalletSend(name='wallet_send'))
+        manager.add_widget(WalletReceive(name='wallet_receive'))
 
-        sm.add_widget(NotaryMenu(name='notary'))
-        sm.add_widget(SignDocument(name='sign_document'))
-        sm.add_widget(CreatePOE(name='create_poe'))
-        return sm
+        manager.add_widget(MessangerMenu(name='messages'))
+        manager.add_widget(BroadcastMessage(name='broadcast_message'))
+        manager.add_widget(PrivateMessage(name='private_message'))
+
+        manager.add_widget(SignatureMenu(name='signatures'))
+        manager.add_widget(SignDocument(name='sign_document'))
+
+        # setup layout
+        layout = BoxLayout(orientation='vertical')
+        navbar = NavBar(manager=manager)
+        layout.add_widget(navbar)
+        layout.add_widget(manager)
+        return layout
 
 
 if __name__ == "__main__":

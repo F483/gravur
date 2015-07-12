@@ -1,44 +1,37 @@
 <WalletReceive>:
-    BoxLayout:
-        orientation: 'vertical'
+    FadingTabbedPanel:
+        tab_width: (self.size[0] / 2) - 2
 
-        NavBar:
+        TabbedPanelItem:
+            text: 'Recieve to address'
 
-        Accordion:
-            orientation: 'vertical'
+            BoxLayout:
+                spacing: 1
+                orientation: 'vertical'
 
-            AccordionItem:
-                title: 'Recieve at address'
-                collapse: False
+                AmountInput:
 
-                BoxLayout:
-                    spacing: 1
-                    orientation: 'vertical'
+                AddressDisplay:
+                    title: 'Recieve address'
+                    address: 'migiScBNvVKYwEiCFhgBNGtZ87cdygtuSQ'
 
-                    AmountInput:
+        TabbedPanelItem:
+            text: 'Send invoice'
 
-                    AddressDisplay:
-                        title: 'Recieve address'
-                        address: 'migiScBNvVKYwEiCFhgBNGtZ87cdygtuSQ'
+            BoxLayout:
+                spacing: 1
+                orientation: 'vertical'
 
-            AccordionItem:
-                title: 'Send invoice to contact'
+                SelectContact:
 
-                BoxLayout:
-                    spacing: 1
-                    orientation: 'vertical'
+                AmountInput:
 
-                    SelectContact:
+                TextInput:
+                    multiline: True
+                    hint_text: 'Invoice text.'
 
-                    AmountInput:
+                LabelBox:
+                    text: 'Fee: 0.0001BTC (~0.001USD)'
 
-                    TextInput:
-                        multiline: True
-                        hint_text: 'Invoice text.'
-
-                    LabelBox:
-                        text: 'Fee: 0.0001BTC (~0.001USD)'
-
-                    StoreButton:
-                        storebutton_text: 'Send invoice'
-
+                StoreButton:
+                    storebutton_text: 'Send invoice'

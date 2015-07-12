@@ -4,9 +4,10 @@
 
 
 from kivy.uix.actionbar import ActionBar
+from kivy.properties import Property
 from utils import load_widget
 
 
 @load_widget
 class NavBar(ActionBar):
-    pass
+    manager = Property(None)

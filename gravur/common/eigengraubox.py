@@ -3,12 +3,10 @@
 # License: MIT (see LICENSE file)
 
 
-from kivy.uix.screenmanager import Screen
-from common.navbar import NavBar  # NOQA
-from common.normalbutton import NormalButton  # NOQA
+from kivy.uix.label import Label
 from utils import load_widget
 
 
 @load_widget
-class NotaryMenu(Screen):
+class EigengrauBox(Label):
     pass

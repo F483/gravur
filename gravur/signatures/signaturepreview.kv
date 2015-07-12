@@ -1,0 +1,21 @@
+<SignaturePreview>:
+    orientation: 'vertical'
+    size_hint_y: None
+    height: 65
+    spacing: 1
+
+    BoxLayout:
+        spacing: 1
+        size_hint_y: None
+        height: 32
+
+        LabelBox:
+            text: root.timestamp
+
+        LabelBox:
+            text: root.alias
+
+    LabelBox:
+        text: root.document_name
+        size_hint_y: None
+        height: 32

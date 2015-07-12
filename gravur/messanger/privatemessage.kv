@@ -1,21 +1,16 @@
 <PrivateMessage>:
     BoxLayout:
+        spacing: 1
         orientation: 'vertical'
 
-        NavBar:
+        SelectContact:
 
-        BoxLayout:
-            spacing: 1
-            orientation: 'vertical'
+        TextInput:
+            multiline: True
+            hint_text: 'Message to be stored on the bitcoin blockchain.'
 
-            SelectContact:
+        LabelBox:
+            text: 'Fee: 0.0001BTC (~0.01USD)'
 
-            TextInput:
-                multiline: True
-                hint_text: 'Message to be stored on the bitcoin blockchain.'
-
-            LabelBox:
-                text: 'Fee: 0.0001BTC (~0.01USD)'
-
-            StoreButton:
-                storebutton_text: 'Send Message'
+        StoreButton:
+            storebutton_text: 'Send Message'

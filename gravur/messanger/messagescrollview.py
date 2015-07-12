@@ -17,9 +17,8 @@ class MessageScrollView(AbstractScrollView):
         id = 'e30fa138367bc73b2174f54bd4cf307521ba26fe91539e0a77e22d3dd2cdbc03'
         entries = [{'txid': id} for i in range(100)]
 
-        kwargs.update({
-            'spacing': 1,
-            'entry_widget': MessagePreview,
-            'entries': entries
-        })
+        kwargs.update({ 'spacing': 5, 'entries': entries })
         super(MessageScrollView, self).__init__(*args, **kwargs)
+
+    def entry_to_widget(self, entry):
+        return MessagePreview(**entry)

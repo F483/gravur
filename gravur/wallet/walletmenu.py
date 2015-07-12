@@ -4,11 +4,12 @@
 
 
 from kivy.uix.screenmanager import Screen
-from wallet.transactionlist import TransactionList  # NOQA
-from wallet.invoicelist import InvoiceList  # NOQA
+from wallet.transactionscrollview import TransactionScrollView  # NOQA
+from wallet.invoicescrollview import InvoiceScrollView  # NOQA
 from common.labelbox import LabelBox  # NOQA
 from common.navbar import NavBar  # NOQA
 from common.normalbutton import NormalButton  # NOQA
+from common.fadingtabedpanel import FadingTabbedPanel  # NOQA
 from utils import load_widget
 
 

@@ -10,6 +10,7 @@ from common.amountinput import AmountInput  # NOQA
 from common.storebutton import StoreButton  # NOQA
 from common.addressdisplay import AddressDisplay  # NOQA
 from contacts.selectcontact import SelectContact  # NOQA
+from common.fadingtabedpanel import FadingTabbedPanel  # NOQA
 from utils import load_widget
 
 

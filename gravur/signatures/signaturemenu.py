@@ -5,11 +5,12 @@
 
 from kivy.uix.screenmanager import Screen
 from common.navbar import NavBar  # NOQA
-from common.labelbox import LabelBox  # NOQA
-from common.storebutton import StoreButton  # NOQA
+from common.normalbutton import NormalButton  # NOQA
+from common.fadingtabedpanel import FadingTabbedPanel  # NOQA
+from signatures.signaturescrollview import SignatureScrollView  # NOQA
 from utils import load_widget
 
 
 @load_widget
-class SignDocument(Screen):
+class SignatureMenu(Screen):
     pass

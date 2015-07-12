@@ -6,7 +6,7 @@
 from kivy.uix.screenmanager import Screen
 from common.navbar import NavBar  # NOQA
 from common.normalbutton import NormalButton  # NOQA
-from messanger.messagelist import MessageList  # NOQA
+from messanger.messagescrollview import MessageScrollView  # NOQA
 from utils import load_widget
 
 

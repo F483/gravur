@@ -12,5 +12,4 @@ from utils import load_widget
 
 @load_widget
 class AddressDisplay(BoxLayout):
-    title = Property('')
     address = Property('')
