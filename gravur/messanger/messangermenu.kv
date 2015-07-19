@@ -23,3 +23,7 @@
             normalbutton_text: 'Retrieve from Transaction'
             size_hint_y: None
             height: 32
+            on_press:
+                screen = root.manager.get_screen('view_message')
+                screen.txid = 'cbf7b6c501111648f0aee79c7cdaee5a64e2f2382409b932a628cb1e0cc1b702'
+                root.manager.current = 'view_message'

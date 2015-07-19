@@ -5,12 +5,14 @@
 
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
+import gravur
 from gravur.mainmenu import MainMenu
 from gravur.wallet.walletmenu import WalletMenu
 from gravur.wallet.walletsend import WalletSend
 from gravur.wallet.walletreceive import WalletReceive
 from gravur.messanger.messangermenu import MessangerMenu
 from gravur.messanger.broadcastmessage import BroadcastMessage
+from gravur.messanger.viewmessage import ViewMessage
 from gravur.messanger.privatemessage import PrivateMessage
 from gravur.signatures.signaturemenu import SignatureMenu
 from gravur.signatures.signdocument import SignDocument
@@ -19,6 +21,10 @@ from gravur.common.historicscreenmanager import HistoricScreenManager
 
 
 class GravurApp(App):
+
+    def __init__(self, backend_config):
+        super(GravurApp, self).__init__()
+        gravur.init_backend(backend_config)
 
     def build(self):
 
@@ -34,6 +40,7 @@ class GravurApp(App):
         manager.add_widget(MessangerMenu(name='messages'))
         manager.add_widget(BroadcastMessage(name='broadcast_message'))
         manager.add_widget(PrivateMessage(name='private_message'))
+        manager.add_widget(ViewMessage(name='view_message'))
 
         manager.add_widget(SignatureMenu(name='signatures'))
         manager.add_widget(SignDocument(name='sign_document'))

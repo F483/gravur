@@ -14,4 +14,3 @@ def load_widget(widget_class):
         Builder.load_file(path)
     Factory.register(widget_class.__name__, cls=widget_class)
     return widget_class
-
