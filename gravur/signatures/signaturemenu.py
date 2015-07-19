@@ -4,11 +4,11 @@
 
 
 from kivy.uix.screenmanager import Screen
-from common.navbar import NavBar  # NOQA
-from common.normalbutton import NormalButton  # NOQA
-from common.fadingtabedpanel import FadingTabbedPanel  # NOQA
-from signatures.signaturescrollview import SignatureScrollView  # NOQA
-from utils import load_widget
+from gravur.common.navbar import NavBar  # NOQA
+from gravur.common.normalbutton import NormalButton  # NOQA
+from gravur.common.fadingtabedpanel import FadingTabbedPanel  # NOQA
+from gravur.signatures.signaturescrollview import SignatureScrollView  # NOQA
+from gravur.utils import load_widget
 
 
 @load_widget

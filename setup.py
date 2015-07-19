@@ -31,18 +31,17 @@ setup(
     download_url = DOWNLOAD_URL,
     test_suite="tests",
     install_requires=[
-        'btctxstore == 2.2.0'
+        'btctxstore == 3.0.0',
+        'kivy == 1.9.0'
     ],
     tests_require=[
         'coverage',
         'coveralls',
-        'ipython',
-        'pudb'  # import pudb; pu.db # set break point
     ],
     zip_safe=False,
     classifiers=[
-        "Development Status :: 1 - Planning",
-        # "Development Status :: 2 - Pre-Alpha",
+        # "Development Status :: 1 - Planning",
+        "Development Status :: 2 - Pre-Alpha",
         # "Development Status :: 3 - Alpha",
         # "Development Status :: 4 - Beta",
         # "Development Status :: 5 - Production/Stable",

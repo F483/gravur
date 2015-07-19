@@ -3,9 +3,9 @@
 # License: MIT (see LICENSE file)
 
 
-from common.abstractscrollview import AbstractScrollView
-from messanger.messagepreview import MessagePreview
-from utils import load_widget
+from gravur.common.abstractscrollview import AbstractScrollView
+from gravur.messanger.messagepreview import MessagePreview
+from gravur.utils import load_widget
 
 
 @load_widget

@@ -5,8 +5,8 @@
 
 from kivy.uix.boxlayout import BoxLayout
 from kivy.properties import Property
-from common.labelbox import LabelBox  # NOQA
-from utils import load_widget
+from gravur.common.labelbox import LabelBox  # NOQA
+from gravur.utils import load_widget
 
 
 DUMMY_MESSAGE = """Lorem Ipsum is simply dummy text of the printing

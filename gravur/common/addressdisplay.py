@@ -5,9 +5,9 @@
 
 from kivy.uix.boxlayout import BoxLayout
 from kivy.properties import Property
-from common.labelbox import LabelBox  # NOQA
-from common.normalbutton import NormalButton  # NOQA
-from utils import load_widget
+from gravur.common.labelbox import LabelBox  # NOQA
+from gravur.common.normalbutton import NormalButton  # NOQA
+from gravur.utils import load_widget
 
 
 @load_widget

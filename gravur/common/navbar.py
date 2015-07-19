@@ -5,7 +5,7 @@
 
 from kivy.uix.actionbar import ActionBar
 from kivy.properties import Property
-from utils import load_widget
+from gravur.utils import load_widget
 
 
 @load_widget

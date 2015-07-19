@@ -5,7 +5,7 @@
 
 from kivy.animation import Animation
 from kivy.uix.tabbedpanel import TabbedPanel
-from utils import load_widget
+from gravur.utils import load_widget
 
 
 @load_widget

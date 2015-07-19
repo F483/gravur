@@ -3,10 +3,7 @@
 # License: MIT (see LICENSE file)
 
 
-from kivy.uix.label import Label
-from gravur.utils import load_widget
+from btctxstore import BtcTxStore
 
 
-@load_widget
-class LabelBox(Label):
-    pass
+blockchain = BtcTxStore(testnet=True, dryrun=True)

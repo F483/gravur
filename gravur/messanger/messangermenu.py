@@ -4,10 +4,10 @@
 
 
 from kivy.uix.screenmanager import Screen
-from common.navbar import NavBar  # NOQA
-from common.normalbutton import NormalButton  # NOQA
-from messanger.messagescrollview import MessageScrollView  # NOQA
-from utils import load_widget
+from gravur.common.navbar import NavBar  # NOQA
+from gravur.common.normalbutton import NormalButton  # NOQA
+from gravur.messanger.messagescrollview import MessageScrollView  # NOQA
+from gravur.utils import load_widget
 
 
 @load_widget

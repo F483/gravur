@@ -4,7 +4,7 @@
 
 
 from kivy.uix.label import Label
-from utils import load_widget
+from gravur.utils import load_widget
 
 
 @load_widget

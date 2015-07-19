@@ -4,10 +4,10 @@
 
 
 from kivy.uix.screenmanager import Screen
-from common.navbar import NavBar  # NOQA
-from common.storebutton import StoreButton  # NOQA
-from common.labelbox import LabelBox  # NOQA
-from utils import load_widget
+from gravur.common.navbar import NavBar  # NOQA
+from gravur.common.storebutton import StoreButton  # NOQA
+from gravur.common.labelbox import LabelBox  # NOQA
+from gravur.utils import load_widget
 
 
 @load_widget

@@ -1,30 +1,21 @@
-#!/usr/bin/env python
 # coding: utf-8
 # Copyright (c) 2015 Fabian Barkhau <fabian.barkhau@gmail.com>
 # License: MIT (see LICENSE file)
 
 
-# set to smallest supported resolution for now
-from kivy.config import Config
-Config.set('graphics', 'width', '320')
-Config.set('graphics', 'height', '460')
-
-
 from kivy.app import App
-from kivy.uix.screenmanager import ScreenManager
-from mainmenu import MainMenu
-from wallet.walletmenu import WalletMenu
-from wallet.walletsend import WalletSend
-from wallet.walletreceive import WalletReceive
-from messanger.messangermenu import MessangerMenu
-from messanger.broadcastmessage import BroadcastMessage
-from messanger.privatemessage import PrivateMessage
-from signatures.signaturemenu import SignatureMenu
-from signatures.signdocument import SignDocument
-from common.navbar import NavBar
-from common.historicscreenmanager import HistoricScreenManager
 from kivy.uix.boxlayout import BoxLayout
-from kivy.properties import StringProperty
+from gravur.mainmenu import MainMenu
+from gravur.wallet.walletmenu import WalletMenu
+from gravur.wallet.walletsend import WalletSend
+from gravur.wallet.walletreceive import WalletReceive
+from gravur.messanger.messangermenu import MessangerMenu
+from gravur.messanger.broadcastmessage import BroadcastMessage
+from gravur.messanger.privatemessage import PrivateMessage
+from gravur.signatures.signaturemenu import SignatureMenu
+from gravur.signatures.signdocument import SignDocument
+from gravur.common.navbar import NavBar
+from gravur.common.historicscreenmanager import HistoricScreenManager
 
 
 class GravurApp(App):
@@ -53,7 +44,3 @@ class GravurApp(App):
         layout.add_widget(navbar)
         layout.add_widget(manager)
         return layout
-
-
-if __name__ == "__main__":
-    GravurApp().run()

@@ -4,13 +4,13 @@
 
 
 from kivy.uix.screenmanager import Screen
-from wallet.transactionscrollview import TransactionScrollView  # NOQA
-from wallet.invoicescrollview import InvoiceScrollView  # NOQA
-from common.labelbox import LabelBox  # NOQA
-from common.navbar import NavBar  # NOQA
-from common.normalbutton import NormalButton  # NOQA
-from common.fadingtabedpanel import FadingTabbedPanel  # NOQA
-from utils import load_widget
+from gravur.wallet.transactionscrollview import TransactionScrollView  # NOQA
+from gravur.wallet.invoicescrollview import InvoiceScrollView  # NOQA
+from gravur.common.labelbox import LabelBox  # NOQA
+from gravur.common.navbar import NavBar  # NOQA
+from gravur.common.normalbutton import NormalButton  # NOQA
+from gravur.common.fadingtabedpanel import FadingTabbedPanel  # NOQA
+from gravur.utils import load_widget
 
 
 @load_widget

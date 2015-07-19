@@ -3,9 +3,9 @@
 # License: MIT (see LICENSE file)
 
 
-from common.abstractscrollview import AbstractScrollView
-from signatures.signaturepreview import SignaturePreview
-from utils import load_widget
+from gravur.common.abstractscrollview import AbstractScrollView
+from gravur.signatures.signaturepreview import SignaturePreview
+from gravur.utils import load_widget
 
 
 @load_widget

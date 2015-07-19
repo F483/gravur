@@ -3,9 +3,9 @@
 # License: MIT (see LICENSE file)
 
 
-from common.abstractscrollview import AbstractScrollView
-from wallet.transactionpreview import TransactionPreview
-from utils import load_widget
+from gravur.common.abstractscrollview import AbstractScrollView
+from gravur.wallet.transactionpreview import TransactionPreview
+from gravur.utils import load_widget
 
 
 @load_widget
