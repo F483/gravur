@@ -17,9 +17,14 @@ class ViewMessage(Screen):
     message = Property('')
     address = Property('')
     signature = Property('')
+    timestamp = Property("YYYY-MM-DD HH:MM")
+    alias = Property("TODO alias")
+    message_type = Property("")
 
     def on_txid(self, instance, value):
         result = gravur.backend.retrieve_broadcast_message(value)
         self.address = result["address"]
         self.message = result["message"]
         self.signature = result["signature"]
+        self.message_type = "BC"
+        # TODO set timestamp, alias

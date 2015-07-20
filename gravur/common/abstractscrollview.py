@@ -35,4 +35,4 @@ class AbstractScrollView(ScrollView):
         self.add_widget(layout)
 
     def entry_to_widget(self, entry):
-        raise Exception("Abstract method")
+        raise Exception("Abstract method!")
