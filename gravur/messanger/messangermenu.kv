@@ -23,10 +23,4 @@
             normalbutton_text: 'Retrieve from Transaction'
             size_hint_y: None
             height: 32
-            on_press:
-                screen = root.manager.get_screen('view_message')
-                # hello gravur
-                # screen.txid = 'cbf7b6c501111648f0aee79c7cdaee5a64e2f2382409b932a628cb1e0cc1b702'
-                # lorem ipsum
-                screen.txid = '88c137c4c46be4cf59d7a67e5c83a31afcd524221a8956e7d6f6bc0999955f7e'
-                root.manager.current = 'view_message'
+            on_press: root.manager.current = 'retrieve_form_tx'

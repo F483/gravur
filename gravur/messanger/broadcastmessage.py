@@ -13,7 +13,7 @@ import gravur
 
 @load_widget
 class BroadcastMessage(Screen):
-    
+
     def broadcast_message(self, message):
 
         # create and send tx
@@ -24,7 +24,6 @@ class BroadcastMessage(Screen):
 
         # switch to view message screen
         screen = self.manager.get_screen('view_message')
-        screen.txid = txid
-        self.manager.current = 'view_message'
+        screen.display(txid)
 
         # TODO clear input properties

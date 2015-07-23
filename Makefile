@@ -29,16 +29,19 @@ devsetup: clean
 	@env/py3/bin/pip install ipython
 
 
-run:
-	#@env/py2/bin/python -m gravur
-	@env/py3/bin/python -m gravur
+run_py2:
+	@env/py2/bin/python -m gravur --testnet 91jDFvuBMj4MHKd2KC6W3zPVcDuSBCqfydPacNCg2E8NAtaF1Wg
 
 
-test: devsetup
+run_py3:
+	@env/py3/bin/python -m gravur --testnet 91jDFvuBMj4MHKd2KC6W3zPVcDuSBCqfydPacNCg2E8NAtaF1Wg
+
+
+test:
 	@env/py2/bin/python setup.py test
 	@env/py3/bin/python setup.py test
 	# import pudb; pu.db # to set break point
 
 
-publish: test
+publish:
 	@env/py2/bin/python setup.py register sdist upload

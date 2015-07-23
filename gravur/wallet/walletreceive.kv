@@ -3,19 +3,6 @@
         tab_width: (self.size[0] / 2) - 2
 
         TabbedPanelItem:
-            text: 'Recieve to address'
-
-            BoxLayout:
-                spacing: 1
-                orientation: 'vertical'
-
-                AmountInput:
-
-                AddressDisplay:
-                    title: 'Recieve address'
-                    address: 'migiScBNvVKYwEiCFhgBNGtZ87cdygtuSQ'
-
-        TabbedPanelItem:
             text: 'Send invoice'
 
             BoxLayout:
@@ -35,3 +22,17 @@
 
                 StoreButton:
                     storebutton_text: 'Send invoice'
+
+        TabbedPanelItem:
+            text: 'Recieve to address'
+
+            BoxLayout:
+                spacing: 1
+                orientation: 'vertical'
+
+                AmountInput:
+
+                AddressDisplay:
+                    title: 'Recieve address'
+                    address: 'migiScBNvVKYwEiCFhgBNGtZ87cdygtuSQ'
+

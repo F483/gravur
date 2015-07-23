@@ -28,3 +28,7 @@ class ViewMessage(Screen):
         self.signature = result["signature"]
         self.message_type = "BC"
         # TODO set timestamp, alias
+
+    def display(self, txid):
+        self.txid = txid
+        self.manager.current = 'view_message'

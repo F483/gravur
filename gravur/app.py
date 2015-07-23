@@ -14,6 +14,7 @@ from gravur.messanger.messangermenu import MessangerMenu
 from gravur.messanger.broadcastmessage import BroadcastMessage
 from gravur.messanger.viewmessage import ViewMessage
 from gravur.messanger.privatemessage import PrivateMessage
+from gravur.messanger.retrievefromtx import RetrieveFromTx
 from gravur.signatures.signaturemenu import SignatureMenu
 from gravur.signatures.signdocument import SignDocument
 from gravur.common.navbar import NavBar
@@ -40,6 +41,7 @@ class GravurApp(App):
         manager.add_widget(MessangerMenu(name='messages'))
         manager.add_widget(BroadcastMessage(name='broadcast_message'))
         manager.add_widget(PrivateMessage(name='private_message'))
+        manager.add_widget(RetrieveFromTx(name='retrieve_form_tx'))
         manager.add_widget(ViewMessage(name='view_message'))
 
         manager.add_widget(SignatureMenu(name='signatures'))

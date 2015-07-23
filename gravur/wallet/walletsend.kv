@@ -3,6 +3,27 @@
         tab_width: (self.size[0] / 2) - 2
 
         TabbedPanelItem:
+            text: 'Send to contact'
+
+            BoxLayout:
+                spacing: 1
+                orientation: 'vertical'
+
+                SelectContact:
+
+                AmountInput:
+
+                TextInput:
+                    multiline: True
+                    hint_text: 'Optional private message to recipient.'
+
+                LabelBox:
+                    text: 'Fee: 0.0001BTC (~0.001USD)'
+
+                StoreButton:
+                    storebutton_text: 'Send'
+
+        TabbedPanelItem:
             text: 'Send to address'
 
             BoxLayout:
@@ -30,23 +51,3 @@
 
                 EigengrauBox:
 
-        TabbedPanelItem:
-            text: 'Send to contact'
-
-            BoxLayout:
-                spacing: 1
-                orientation: 'vertical'
-
-                SelectContact:
-
-                AmountInput:
-
-                TextInput:
-                    multiline: True
-                    hint_text: 'Optional private message to recipient.'
-
-                LabelBox:
-                    text: 'Fee: 0.0001BTC (~0.001USD)'
-
-                StoreButton:
-                    storebutton_text: 'Send'

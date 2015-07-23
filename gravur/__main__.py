@@ -5,6 +5,7 @@
 
 
 import os
+import sys
 import argparse
 
 # kivy setup
@@ -12,10 +13,15 @@ os.environ["KIVY_NO_ARGS"] = "1"
 #os.environ["KIVY_NO_CONSOLELOG"] = "1"
 os.environ["KIVY_NO_FILELOG"] = "1"
 
-# set to smallest supported resolution for now
+# min supported resolution
 from kivy.config import Config
 Config.set('graphics', 'width', '320')
 Config.set('graphics', 'height', '460')
+
+# demo resolution
+#from kivy.config import Config
+#Config.set('graphics', 'width', '400')
+#Config.set('graphics', 'height', '640')
 
 
 from gravur.app import GravurApp

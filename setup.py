@@ -31,7 +31,7 @@ setup(
     download_url = DOWNLOAD_URL,
     test_suite="tests",
     install_requires=[
-        'btctxstore == 3.0.0',
+        'btctxstore == 4.0.0',
         'kivy == 1.9.0'
     ],
     tests_require=[
