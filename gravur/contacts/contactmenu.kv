@@ -1,0 +1,35 @@
+<ContactMenu>:
+    BoxLayout:
+        spacing: 1
+        orientation: 'vertical'
+
+        FadingTabbedPanel:
+            tab_width: (self.size[0] / 2) - 2
+
+            TabbedPanelItem:
+                text: 'My Identities'
+
+                BoxLayout:
+                    spacing: 1
+                    orientation: 'vertical'
+
+                    NormalButton:
+                        size_hint_y: None
+                        height: 32
+                        normalbutton_text: 'Create Identity'
+
+                    ContactScrollView:
+
+            TabbedPanelItem:
+                text: 'Contacts'
+
+                BoxLayout:
+                    spacing: 1
+                    orientation: 'vertical'
+
+                    NormalButton:
+                        size_hint_y: None
+                        height: 32
+                        normalbutton_text: 'Import Contact'
+
+                    ContactScrollView:

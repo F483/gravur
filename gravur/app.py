@@ -17,6 +17,7 @@ from gravur.messanger.privatemessage import PrivateMessage
 from gravur.messanger.retrievefromtx import RetrieveFromTx
 from gravur.signatures.signaturemenu import SignatureMenu
 from gravur.signatures.signdocument import SignDocument
+from gravur.contacts.contactmenu import ContactMenu
 from gravur.common.navbar import NavBar
 from gravur.common.historicscreenmanager import HistoricScreenManager
 
@@ -46,6 +47,8 @@ class GravurApp(App):
 
         manager.add_widget(SignatureMenu(name='signatures'))
         manager.add_widget(SignDocument(name='sign_document'))
+
+        manager.add_widget(ContactMenu(name='contacts'))
 
         # setup layout
         layout = BoxLayout(orientation='vertical')
