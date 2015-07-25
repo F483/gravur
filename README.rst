@@ -21,12 +21,32 @@ gravur
 Secure censorship resistant bitcoin messaging application.
 
 
-============
-Installation
-============
+=====================================
+Installation for development (Ubuntu)
+=====================================
 
 ::
 
-  pip install gravur
+  # install kivy
+  sudo add-apt-repository ppa:kivy-team/kivy
+  sudo apt-get install python-kivy
+  sudo apt-get install python3-kivy
 
+  # download gravur
+  git clone https://github.com/F483/gravur && cd gravur
 
+  # setup python 2 virtualenv
+  virtualenv -p /usr/bin/python2 --system-site-packages env/py2
+  env/py2/bin/python setup.py develop
+
+  # setup python 3 virtualenv
+  virtualenv -p /usr/bin/python3 --system-site-packages env/py3
+  env/py3/bin/python setup.py develop
+
+  # run gravur with python 2 using the bitcoin testnet
+  env/py2/bin/python -m gravur --testnet <TEST_WIF>
+
+  # run gravur with python 3 using the bitcoin testnet
+  env/py3/bin/python -m gravur --testnet <TEST_WIF>
+
+  # see Makefile for some convenient shortcuts
