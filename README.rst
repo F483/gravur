@@ -21,6 +21,16 @@ gravur
 Secure censorship resistant bitcoin messaging application.
 
 
+=====
+Goals
+=====
+
+ * Simple bitcoin wallet that is easily understandable for novices.
+ * Integrated useful blockchain apps (messages, invoices, signing, escrow, ...).
+ * Strong security (SPV Wallet that doesn't require trusted third parties). 
+ * Cross platform (Android, iOS, Windows, Mac, Linux)
+
+
 =====================================
 Installation for development (Ubuntu)
 =====================================
