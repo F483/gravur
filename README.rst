@@ -2,23 +2,10 @@
 gravur
 ######
 
-|BuildLink|_ |CoverageLink|_ |LicenseLink|_ |IssuesLink|_
+A simple, secure and feature rich bitcoin wallet with additional blockchain
+apps. All data is stored on the blockchain.
 
-
-.. |BuildLink| image:: https://travis-ci.org/F483/gravur.svg
-.. _BuildLink: https://travis-ci.org/F483/gravur
-
-.. |CoverageLink| image:: https://coveralls.io/repos/F483/gravur/badge.svg
-.. _CoverageLink: https://coveralls.io/r/F483/gravur
-
-.. |LicenseLink| image:: https://img.shields.io/badge/license-MIT-blue.svg
-.. _LicenseLink: https://raw.githubusercontent.com/F483/gravur/master/LICENSE
-
-.. |IssuesLink| image:: https://img.shields.io/github/issues/F483/gravur.svg
-.. _IssuesLink: https://github.com/F483/gravur/issues
-
-
-Secure censorship resistant bitcoin messaging application.
+Donations: 1Dnpy4qd5XSsiAgwX8EqYbR2DLV2kB1Kha
 
 
 =====
@@ -27,8 +14,21 @@ Goals
 
  * Simple bitcoin wallet that is easily understandable for novices.
  * Integrated useful blockchain apps (messages, invoices, signing, escrow, ...).
- * Strong security (SPV Wallet that doesn't require trusted third parties). 
+ * Strong security (SPV Wallet that doesn't require trusted third parties).
  * Cross platform (Android, iOS, Windows, Mac, Linux)
+
+
+========
+Features
+========
+
+ * A fully featured bitcoin wallet.
+ * Identities/Contacts: A signed address alias used to enable additional features.
+ * Censorship resistant public broadcast messages (much like tweets).
+ * Private encryped messages.
+ * Document signatures and proof of existance.
+ * Shared wallets (using multisig)
+ * Escrow (using multisig).
 
 
 =====================================

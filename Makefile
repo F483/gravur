@@ -15,6 +15,7 @@ clean:
 	@rm -rf build
 	@rm -rf dist
 	@rm -rf *.egg
+	@rm -rf *.egg-info
 	@find | grep -i ".*\.pyc$$" | xargs -r -L1 rm
 
 
@@ -30,11 +31,11 @@ devsetup: clean
 
 
 run_py2:
-	@env/py2/bin/python -m gravur --testnet 91jDFvuBMj4MHKd2KC6W3zPVcDuSBCqfydPacNCg2E8NAtaF1Wg
+	@env/py2/bin/python gravur/bin/gravur --testnet 91jDFvuBMj4MHKd2KC6W3zPVcDuSBCqfydPacNCg2E8NAtaF1Wg
 
 
 run_py3:
-	@env/py3/bin/python -m gravur --testnet 91jDFvuBMj4MHKd2KC6W3zPVcDuSBCqfydPacNCg2E8NAtaF1Wg
+	@env/py3/bin/python gravur/bin/gravur --testnet 91jDFvuBMj4MHKd2KC6W3zPVcDuSBCqfydPacNCg2E8NAtaF1Wg
 
 
 test:
