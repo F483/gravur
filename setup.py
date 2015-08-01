@@ -12,7 +12,7 @@ THISDIR = os.path.dirname(os.path.abspath(__file__))
 os.chdir(THISDIR)
 
 
-VERSION = open("version.txt").readline().strip()
+VERSION = open(os.path.join("gravur", "version.txt")).readline().strip()
 DOWNLOAD_BASEURL = "https://pypi.python.org/packages/source/a/gravur/"
 DOWNLOAD_URL = DOWNLOAD_BASEURL + "gravur-%s.tar.gz" % VERSION
 
@@ -27,9 +27,11 @@ setup(
     author='Fabian Barkhau',
     author_email='fabian.barkhau@gmail.com',
     license='MIT',
-    packages=find_packages(),
+    packages=find_packages(exclude=['gravur.bin']),
+    scripts=['gravur/bin/gravur'],
     download_url = DOWNLOAD_URL,
     test_suite="tests",
+    package_data={'': ['version.txt']},
     install_requires=[
         'btctxstore == 4.0.0',
         'kivy == 1.9.0'

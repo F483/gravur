@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 # coding: utf-8
 # Copyright (c) 2015 Fabian Barkhau <fabian.barkhau@gmail.com>
 # License: MIT (see LICENSE file)
@@ -7,6 +6,7 @@
 import os
 import sys
 import argparse
+
 
 # kivy setup
 os.environ["KIVY_NO_ARGS"] = "1"
@@ -27,7 +27,7 @@ Config.set('graphics', 'height', '460')
 from gravur.app import GravurApp
 
 
-def _parse_args():
+def _parse_args(args):
     class ArgumentParser(argparse.ArgumentParser):
         def error(self, message):
             sys.stderr.write('error: %s\n' % message)
@@ -57,9 +57,9 @@ def _parse_args():
     # tmp_wallet
     parser.add_argument("temp_wallet", help="Temporary prototype wallet.")
 
-    return vars(parser.parse_args())
+    return vars(parser.parse_args(args=args))
 
 
-if __name__ == "__main__":
-    backend_config = _parse_args()
+def main(args):
+    backend_config = _parse_args(args)
     GravurApp(backend_config).run()
